@@ -1,0 +1,19 @@
+1.Change the parameters in the main according to the input 
+2.dirpath is the location of input files FOr eg:"user1/" or "movie1/"
+3.limit is used for appending the zeros to the rowindex to generate file name ,Change the limit according to the max. no. of rows possible 
+  For e.g if no. of rows are 1682 and the filenames are like 0001 ,0002 ..........1681 ,1682 etc.
+  Then limit should be 1000;(there is a procedure for this - factlimit)
+  but in user1 ,no of rows are 943 , but the files names are going from 0001 to ...0943, so provide limit for such cases explicitly .For e.g 1000 in this cases.
+4.typedef struct {
+	int mode;
+	int lb;
+	int ub;
+	Data dt;
+	float cent_rv[NUMCENTROIDS][NUMCOLS]; //Array for holding sum of different dimensions for the recomputation for a centroid
+	int totalpts[NUMCENTROIDS]; //Array for holding total no. of points near to a centroid
+	float mean[NUMCOLS]; //Mean for every Attribute based on data points
+} divideattr;
+
+These static arrays dimensions should be changed according to the input
+
+

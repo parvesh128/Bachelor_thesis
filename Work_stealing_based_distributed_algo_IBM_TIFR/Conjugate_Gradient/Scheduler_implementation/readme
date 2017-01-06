@@ -1,0 +1,2 @@
+1. Change the parameters in the main accorsing to the type of input provided.
+2. Change the NSIZE in Sched.h .It should be equal to global_N (dimension of A matrix). 
