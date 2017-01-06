@@ -1,0 +1,13 @@
+This code implements three multi-threaded algorithms (BFS, DFS, Shiloach-Vishkin(SV)) that compute 
+the spanning tree of a random connected graph. It is used to test X10's support for fine-grained 
+parallelism.
+
+To compile the code:
+ 1) javac X10AtomicInt.java (If it hasn't been done sox)
+ 2) x10c -classpath . Span.x10 (add proper x10c flags if needed)
+
+To run the code:
+ 1) x10 -classpath . -INIT_THREADS_PER_PLACE = ttt Span 
+	* ttt is the initial number of Java threads allocated to thread pool 
+		for a single place (default= 3)	
+	* add other x10 flags if needed
